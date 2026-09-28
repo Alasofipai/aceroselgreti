@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceros El Tigre - Venta de Acero y Perfiles</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Remixicons para iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tigreRed: '#cc0000',
+                        tigreDark: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Top Bar -->
+    <div class="bg-tigreDark text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="ri-map-pin-fill text-tigreRed"></i> Querétaro, Qro. México</span>
+                <span class="hidden md:inline"><i class="ri-time-fill text-tigreRed"></i> Lun - Vie: 8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:4421234567" class="hover:text-tigreRed transition"><i class="ri-phone-fill text-tigreRed"></i> (442) 123-4567</a>
+                <a href="mailto:ventas@aceroseltigreqro.com" class="hover:text-tigreRed transition"><i class="ri-mail-fill text-tigreRed"></i> ventas@aceroseltigreqro.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="bg-tigreRed text-white font-black text-2xl px-3 py-1 rounded">T</div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-wider text-tigreDark block leading-none">ACEROS</span>
+                    <span class="text-sm font-bold text-tigreRed tracking-widest block">EL TIGRE</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-700">
+                <a href="#" class="text-tigreRed transition">Inicio</a>
+                <a href="#productos" class="hover:text-tigreRed transition">Productos</a>
+                <a href="#nosotros" class="hover:text-tigreRed transition">Nosotros</a>
+                <a href="#contacto" class="hover:text-tigreRed transition">Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contacto" class="bg-tigreRed hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded shadow transition">
+                    Cotizar Ahora
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle (Button) -->
+            <button id="menu-btn" class="md:hidden text-2xl text-tigreDark focus:outline-none">
+                <i class="ri-menu-line" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-3 shadow-lg">
+            <a href="#" class="block text-tigreRed font-semibold py-1">Inicio</a>
+            <a href="#productos" class="block text-gray-700 font-semibold py-1">Productos</a>
+            <a href="#nosotros" class="block text-gray-700 font-semibold py-1">Nosotros</a>
+            <a href="#contacto" class="block text-gray-700 font-semibold py-1">Contacto</a>
+            <a href="#contacto" class="block text-center bg-tigreRed text-white font-bold py-2 rounded mt-2">Cotizar Ahora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-tigreDark text-white py-24 md:py-32 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80');">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center md:text-left">
+            <span class="bg-tigreRed text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded inline-block mb-4">Calidad y Fortaleza Industrial</span>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
+                Soluciones en Acero <br class="hidden sm:inline">para la Industria y Construcción
+            </h1>
+            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mb-8 mx-auto md:mx-0">
+                Proveemos perfiles, placas, vigas y materiales de la más alta calidad con entregas directas y atención personalizada en Querétaro y la región.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <a href="#productos" class="bg-tigreRed hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded text-center transition shadow-lg">
+                    Ver Catálogo
+                </a>
+                <a href="#contacto" class="bg-transparent hover:bg-white hover:text-tigreDark border-2 border-white text-white font-bold px-8 py-3.5 rounded text-center transition">
+                    Solicitar Cotización
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-tigreDark uppercase tracking-wide">Nuestros Productos</h2>
+            <div class="w-20 h-1 bg-tigreRed mx-auto mt-2"></div>
+            <p class="text-gray-600 mt-3 max-w-xl mx-auto">Contamos con un amplio inventario en aceros estructurales y comerciales.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Vigas IPR" class="w-48 h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-tigreDark mb-2">Vigas IPR y IPS</h3>
+                    <p class="text-gray-600 text-sm mb-4">Ideales para estructuras metálicas de gran soporte, naves industriales y puentes.</p>
+                    <a href="#contacto" class="text-tigreRed font-bold text-sm flex items-center gap-1 hover:underline">Cotizar producto <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=600&q=80" alt="Placas de Acero" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-tigreDark mb-2">Placas de Acero</h3>
+                    <p class="text-gray-600 text-sm mb-4">Placas comerciales y estructurales en diversos espesores y medidas estándar.</p>
+                    <a href="#contacto" class="text-tigreRed font-bold text-sm flex items-center gap-1 hover:underline">Cotizar producto <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Perfiles Tubulares" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-tigreDark mb-2">Perfiles Tubulares (PTR)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Tubos circulares, cuadrados y rectangulares para herrería y construcción general.</p>
+                    <a href="#contacto" class="text-tigreRed font-bold text-sm flex items-center gap-1 hover:underline">Cotizar producto <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto / Cotizador -->
+    <section id="contacto" class="bg-gray-100 py-16 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+                <div class="bg-tigreDark text-white p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-black mb-4">Hablemos de tu Proyecto</h3>
+                        <p class="text-gray-300 text-sm mb-6">Completa el formulario y uno de nuestros asesores comerciales se pondrá en contacto contigo de inmediato con los mejores precios.</p>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-tigreRed text-xl"></i>
+                            <span>(442) 123-4567</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-map-pin-fill text-tigreRed text-xl"></i>
+                            <span>Querétaro, Qro., México</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="p-8 space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nombre Completo</label>
+                        <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-tigreRed" placeholder="Tu nombre" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Teléfono</label>
+                        <input type="tel" class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-tigreRed" placeholder="(442) 000 0000" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Mensaje / Requerimiento</label>
+                        <textarea rows="3" class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-tigreRed" placeholder="Describe los materiales que necesitas..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-tigreRed hover:bg-red-700 text-white font-bold py-2.5 rounded transition">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-tigreDark text-white text-sm py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p>&copy; 2026 Aceros El Tigre. Todos los derechos reservados.</p>
+            <div class="flex gap-4 text-xl">
+                <a href="#" class="hover:text-tigreRed transition"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="hover:text-tigreRed transition"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="hover:text-tigreRed transition"><i class="ri-whatsapp-line"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/524421234567" target="_blank" class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl transition z-50">
+        <i class="ri-whatsapp-fill"></i>
+    </a>
+
+    <!-- Client-side Script para menú móvil -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'ri-menu-line';
+            } else {
+                menuIcon.className = 'ri-close-line';
+            }
+        });
+    </script>
+</body>
+</html>
